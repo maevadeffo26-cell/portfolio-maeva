@@ -1,0 +1,169 @@
+/*         BASE             */
+/* ======================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f7f8;
+  color: #333;
+  line-height: 1.8;
+  scroll-behavior: smooth;
+}
+
+/* ======================== */
+/*        NAVBAR            */
+/* ======================== */
+.navbar {
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: flex-end;
+  background: #2575fc;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-link {
+  color: #fff;
+  font-weight: 600;
+  margin-left: 20px;
+  text-decoration: none; /* enlever le soulignement */
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  background-color: #1c5fc2; /* couleur hover harmonieuse */
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ======================== */
+/*       WELCOME SECTION    */
+/* ======================== */
+#welcome {
+  position: relative;               /* pour l'overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 120px 20px 80px 20px;
+
+  /* IMAGE DE FOND */
+  background: url('../images/img2.avif') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  color: #fff; /* texte blanc */
+  z-index: 1;
+
+  
+}
+
+/* OVERLAY pour texte lisible */
+#welcome::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1; /* derrière le texte */
+}
+
+#welcome .welcome-text {
+  position: relative;
+  z-index: 2;
+}
+
+#welcome h1 {
+  font-size: 3.5rem;
+  color: #0b1527;
+  margin-bottom: 20px;
+}
+
+#welcome p {
+  font-size: 1.3rem;
+  color: #322525;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  
+}
+/* texte qui s'affiche comme clavier */
+.typing-text {
+  font-size: 1.2rem;
+  max-width: 700px;
+  color: #fff;
+  margin: 20px auto 0;
+  white-space: pre-wrap;
+  min-height: 80px; /* pour éviter les sauts */
+}
+/* SECTION À PROPOS */
+#about {
+  background: #ffffff; /* couleur de fond harmonieuse */
+  padding: 100px 20px;
+}
+
+#about h2 {
+  font-size: 2.8rem;
+  color: #2575fc;
+  margin-bottom: 30px;
+}
+
+.typing-text {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  white-space: pre-wrap; /* garde les retours à la ligne */
+  min-height: 80px; /* pour éviter le saut à chaque actualisation */
+}
+
+/* ======================== */
+/*         FOOTER           */
+/* ======================== */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 0.9rem;
+}
+
+/* ======================== */
+/*      FADE-IN ANIMATION    */
+/* ======================== */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ======================== */
+/*       RESPONSIVE         */
+/* ======================== */
+@media (max-width: 992px) {
+  #welcome h1 { font-size: 2.8rem; }
+  #welcome p { font-size: 1.1rem; }
+}
+
+@media (max-width: 576px) {
+  #welcome { padding: 150px 20px 80px 20px; }
+  #welcome h1 { font-size: 2.2rem; }
+  #welcome p { font-size: 1rem; }
+  .navbar { justify-content: center; gap: 15px; }
+}

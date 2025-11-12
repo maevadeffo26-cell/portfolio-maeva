@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Projets</title>
+  <link rel="stylesheet" href="projets.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Accueil</a> |
+    <a href="projets.html">Projets</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="container">
+    <h1>Mes Réalisations</h1>
+    <p class="intro">Voici deux projets récents sur lesquels j’ai travaillé.</p>
+
+    <!-- Projet 1 -->
+    <section class="project-card">
+      <div class="project-content">
+        <h2>Gestion d’inventaire</h2>
+        <p>
+          Une application web pour gérer les stocks d’une entreprise d’informatique avec suivi des produits,
+          transactions et visualisation graphique des données. ce projet a été réalisé grace au technologie HTML,CSS,JS et PHP
+        </p>
+      </div>
+      <div class="project-images">
+        <img src="images/img projet 1.png" alt="Gestion d'inventaire - écran 1">
+        <img src="images/img projet 11.png" alt="Gestion d'inventaire - écran 2">
+      </div>
+      <div class="project-details">
+        <p>
+          Détails du projet :
+          <ul>
+            <li>Ajout, modification et suppression de produits</li>
+            <li>Gestion des transactions d’entrée et de sortie en stock avec possibilité de les filtrer ou rechercher à l’aide d’un intervalle de date ou du nom et de télécharger également sous forme PDF les différentes transactions.</li>
+            <li>Suivi produits en stock permet au gestionnaire de gérer les produits en stock avec des fonctions de suppression, ajout, de recherche et modification qui seront affectés directement à la base de données</li>
+            <li>Tableau de bord interactif permet de visualiser de manière graphique les différentes transactions des produits ; pour la création de ce graphe j’ai utilisé la librairie JavaScript chart.js </li>
+          </ul>
+        </p>
+      </div>
+      <button class="btn toggle-btn">Voir plus</button>
+    </section>
+
+    <!-- Projet 2 -->
+    <section class="project-card">
+      <div class="project-content">
+        <h2>Système d’authentification</h2>
+        <p>
+          Ce système est un module sécurisé pour l’inscription et la connexion des utilisateurs grace à son email et son mot de passe. Ce projet a été réalisé grace aux technologies HTML,CSS et PHP
+        </p>
+      </div>
+      <div class="project-images">
+        <img src="images/img projet 2.png" alt="Authentification - écran 1">
+        <img src="images/img projet 22.png" alt="Authentification - écran 2">
+      </div>
+      <div class="project-details">
+        <p>
+          Détails du projet :
+          <ul>
+            <li>Inscription et connexion sécurisées</li>
+            <li>Hachage des mots de passe</li>
+            <li>Gestion des sessions</li>
+            <li>Validation des formulaires</li>
+            <li>Base pour espace membre web</li>
+          </ul>
+        </p>
+      </div>
+      <button class="btn toggle-btn">Voir plus</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Mon Portfolio</p>
+  </footer>
+
+  <script src="projets.js"></script>
+</body>
+</html>
